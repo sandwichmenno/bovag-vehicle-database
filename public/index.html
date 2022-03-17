@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bovag Vehicle App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Components -->
+    <script src="./components/alert.js"></script>
+    <script src="./components/slide-show.js"></script>
+    <script src="./components/spec-card.js"></script>
+    <script src="./components/button.js"></script>
+    <script src="./components/badge.js"></script>
+    <script src="./components/spinner.js"></script>
+    <script src="./components/vehicle-card.js"></script>
+    <script src="./components/vehicle-overview.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__logo-wrapper">
+                <img src="assets/logo-bovag.svg" class="header__logo" alt="BOVAG logo" />
+            </div>
+        </div>
+    </header>
+
+    <main id="app" class="container">
+        <loading-spinner visible="true">Loading...</loading-spinner>
+
+        <div id="vehicles" class="vehicles-list"></div>
+        <vehicle-overview id="vehicle" class="vehicle-overview vehicle-overview--hidden" vehicle="null">test</vehicle-overview>
+    </main>
+
+    <footer class="footer">
+        <div class="container">Made by Menno van Voorst :)</div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

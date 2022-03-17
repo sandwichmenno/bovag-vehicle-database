@@ -1,0 +1,13 @@
+{
+  "name": "vehicle-api",
+  "version": "1.0.0",
+  "description": "Vehicle API for front-end assessment",
+  "author": "viaBOVAG.nl",
+  "private": true,
+  "scripts": {
+    "start": "json-server api.json --static ../public"
+  },
+  "dependencies": {
+    "json-server": "^0.15.1"
+  }
+}

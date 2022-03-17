@@ -1,0 +1,131 @@
+:root {
+    --yellow: #ECC94B;
+    --muted: #718096;
+    --lightGray: #CBD5E0;
+    --gray: #2D3748;
+    --darkGray: #171923;
+    --lightBlue: #63B3ED;
+    --blue: #3182CE;
+    --white: #FFFFFF;
+
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xxl: 1400px;
+
+    --max-container-width-xs: 100%;
+    --max-container-width-sm: 540px;
+    --max-container-width-md: 720px;
+    --max-container-width-lg: 960px;
+    --max-container-width-xl: 1140px;
+    --max-container-width-xxl: 1320px;
+
+    --box-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --box-shadow-xxl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+    --grid-gap: 24px;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gray);
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: var(--max-container-width-xs);
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 1.5rem;
+}
+
+/* Header */
+.header {
+    height: 75px;
+    background: var(--darkGray);
+    color: var(--white);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-wrapper {
+    height: 55px;
+}
+
+.header__logo {
+    height: 100%;
+}
+
+/* Footer */
+.footer {
+    height: 75px;
+    background: var(--darkGray);
+    color: var(--white);
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+}
+
+/* Vehicle list */
+.vehicles-list {
+    display: grid;
+    column-gap: var(--grid-gap);
+    row-gap: var(--grid-gap);
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.vehicles-list--hidden {
+    display: none;
+}
+
+/* Vehicle overview */
+.vehicle-overview {
+
+}
+
+.vehicle-overview--hidden {
+    display: none;
+}
+
+/* Small screens */
+@media only screen and (min-width: 576px) {
+    .container {
+        max-width: var(--max-container-width-sm);
+    }
+}
+
+/* Medium screens */
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: var(--max-container-width-md);
+    }
+
+    .vehicles-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large screens */
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: var(--max-container-width-lg);
+    }
+
+    .vehicles-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
